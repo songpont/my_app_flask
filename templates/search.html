@@ -1,0 +1,19 @@
+<!-- templates/search.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results for "{{ search_term }}"</h1>
+    {% if related_issues %}
+        <ul>
+        {% for issue in related_issues %}
+            <li>{{ issue }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No related issues found.</p>
+    {% endif %}
+</body>
+</html>
